@@ -1,0 +1,13 @@
+com\getir\reading\service\CustomerServiceTest.class
+com\getir\reading\service\StatisticsServiceIT.class
+com\getir\reading\service\StatisticsServiceTest.class
+com\getir\reading\service\CustomerServiceIT.class
+com\getir\reading\ReadingApplicationTests.class
+com\getir\reading\service\BookServiceIT.class
+com\getir\reading\service\OrderServiceIT.class
+com\getir\reading\service\OrderServiceTest.class
+com\getir\reading\common\CommonModels.class
+com\getir\reading\service\UserServiceTest.class
+com\getir\reading\service\UserServiceIT.class
+com\getir\reading\service\BookServiceTest.class
+com\getir\reading\base\BaseIntegrationTest.class

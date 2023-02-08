@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  reading:
+    image: docker.io/zeynepmaden/reading:0.0.1-SNAPSHOT
+    ports:
+      - "8081:8081"
+    environment:
+      DATASOURCE_URL: jdbc:postgresql://postgres96:5432/getir
+      DATASOURCE_USERNAME: getir
+      DATASOURCE_PASSWORD: getir1234
+    links:
+      - postgres96
+    depends_on:
+      - postgres96
+    networks:
+      - getir-network
+  postgres96:
+    image: postgres:9.6
+    container_name: postgres96
+    ports:
+      - "5432:5432"
+    volumes:
+      - /var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: getir
+      POSTGRES_USER: getir
+      POSTGRES_PASSWORD: getir1234
+    networks:
+      - getir-network
+networks:
+  getir-network:
+    driver: bridge
+    name: getir-network
